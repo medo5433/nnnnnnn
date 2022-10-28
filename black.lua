@@ -12559,12 +12559,6 @@ end
 Redis:set(black.."gamebot:Set:Manager:rdd"..msg.sender_id.user_id..":"..msg.chat_id,true)
 return send(msg.chat_id,msg.id,"ارسل السؤال ")
 end
-if Redis:get(Saidi.."tast"..msg.sender_id.user_id) == "botttt" then
-local nspp = {"يراجل قول كلام غير كدا 😹","انت كداب يا ابو صلاح 😹","كلامك صحيح 👍","انت صح يواد 😊","اي تذب ده كلو 😒","الرجل ده صح 🙈❤️","الرجل ده كداب 😂",}
-local rdbhoto = nspp[math.random(#nspp)]
-xl = '*〘  '..text..'  〙*\n* '..rdbhoto..' *'
-bot.sendText(msg_chat_id,msg_id,xl,"md",true) 
-Redis:del(black.."tast"..msg.sender_id.user_id) 
 end
 if text == "صراحه" or text == "صرحه" then
 Redis:set(black.."tast"..msg.sender_id.user_id,"botttt") 
@@ -17616,9 +17610,6 @@ Redis:sadd(BLACK..'BLACK:Num:User:Pv',msg.sender.user_id)
 if not msg.ControllerBot then
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
-{
-{text = 'قسـم الحمايـه 🛡',type = 'text'},
-},
 {
 {text = 'ٴ♡━━━━━━ ᴛꞮɢᴇƦ ━━━━━♡ ٴ',type = 'text'},
 },
