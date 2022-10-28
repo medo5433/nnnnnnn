@@ -12559,7 +12559,7 @@ end
 Redis:set(black.."gamebot:Set:Manager:rdd"..msg.sender_id.user_id..":"..msg.chat_id,true)
 return send(msg.chat_id,msg.id,"ارسل السؤال ")
 end
-if Redis:get(black.."tast"..msg.sender_id.user_id) == "botttt" then
+if Redis:get(Saidi.."tast"..msg.sender_id.user_id) == "botttt" then
 local nspp = {"يراجل قول كلام غير كدا 😹","انت كداب يا ابو صلاح 😹","كلامك صحيح 👍","انت صح يواد 😊","اي تذب ده كلو 😒","الرجل ده صح 🙈❤️","الرجل ده كداب 😂",}
 local rdbhoto = nspp[math.random(#nspp)]
 xl = '*〘  '..text..'  〙*\n* '..rdbhoto..' *'
