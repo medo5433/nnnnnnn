@@ -13129,49 +13129,7 @@ send(msg_chat_id,msg_id,'\n᯽ اكتب ايدي المجموعه بشكل صح�
 end
 end
 ----بنك
-if text == "البنك" or text == "بنك" or text == "اوامر البنك" then
-local m = "https://t.me/S_a_i_d_i/2448"
-local Jabwa = bot.getUser(Sudo_Id) 
-local ban = bot.getUser(msg.sender_id.user_id)
-if ban.first_name then
-Jabwaiusername = '* 𖥔 اختار لغتك لعرض اوامر لعبه البنك* \n '..ban.first_name..' '
-else
-Jabwaiusername = " لا يوجد"
-end
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '⟨•💖▸ عــربــي •⟩', callback_data=msg.sender_id.user_id.."/nsnsks"},
-},
-{
-{text = '⟨•💖▸ 𝙀𝙄𝙉𝙂𝙇𝙄𝙎𝙃 •⟩', callback_data=msg.sender_id.user_id.."/fghbdn"},
-},
-{
-{text = '𖥔 مـطـور الـبـوت 🤖', url = "https://t.me/"..Jabwa.username..""},
-},
-}
-local rep = msg.id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg_chat_id.."&caption="..URL.escape(Jabwaiusername).."&photo="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown&reply_markup="..JSON.encode(keyboard))
-end
-
-if text then
-if text:match("^انطق (.*)$") or text:match("^انطقي (.*)$") then
-local inoi = text:match("^انطق (.*)$") or text:match("^انطقي (.*)$")
-local intk = inoi:gsub(" ","-")
-if intk:match("%a") then
-lan = "en"
-else
-lan = "ar"
-end
-local rand = math.random(1,999)
-os.execute("gtts-cli "..intk.." -l '"..lan.."' -o 'intk"..rand..".mp3'")
-LuaTele.sendAudio(msg_chat_id,msg_id,'./intk'..rand..'.mp3',tostring(inoi),"html",nil,tostring(inoi),"@J_F_A_I")
-sleep(1)
-os.remove("intk"..rand..".mp3")
-end
-end
 --------بدايه البنك 
-
 ----
 if text == 'تفعيل ردود السورس' then
 if not msg.Manger then
@@ -13737,8 +13695,39 @@ local t = "اليك اغنيه ب فيديو🏴‍☠️♥️"
 local rep = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendaudio?chat_id="..msg_chat_id.."&caption="..URL.escape(t).."&audio="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown")
 end
-if text == 'Barloo' then
-local UserId_Info = LuaTele.searchPublicChat("bar_lo0o0")
+if text == "تويت بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,28); 
+local Text ='مرحبا إليك تويت بالصوره✨🌚' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/wffhvv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == "لو خيروك بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,24); 
+local Text ='مرحبا اليك لو خيروك بالصوره🍁🌝' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/kbbnv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == "حروف بالصور" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,15); 
+local Text ='مرحبا إليك حروف بالصوره✨🌚' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ffadi8/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'medo' then
+local UserId_Info = LuaTele.searchPublicChat("U_Y_3_M")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -13766,12 +13755,502 @@ local MsgId = msg.id/2097152/0.5
 local MSGID = string.gsub(MsgId,'.0','')
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/MemzDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
 end
-if text == "فلم" or text == "افلام" then 
-Abs = math.random(2,140); 
-local Text ='*᥀︙تم اختيار الفلم لك*'
-local MsgId = msg.id/2097152/0.5
-local MSGID = string.gsub(MsgId,'.0','')
-https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/MoviesDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
+if text == "افلام" or text == "فلم" or text == "الافلام" then
+local Jabwa = bot.getUser(msg.sender_id.user_id)
+local news = Jabwa.first_name
+local t = "*اليك قائمة الافلام من سورس تايجر 𖥔*"
+local m = "https://t.me/S_a_i_d_i/1188"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '🇪🇬 مصري', callback_data=msg.sender_id.user_id.."/Cinema1"},{text = '🇳🇿 أجنبي', callback_data=msg.sender_id.user_id.."/Cinema2"},
+},
+{
+{text = '🧸 كارتون', callback_data=msg.sender_id.user_id.."/Cinema3"},{text = '🎬 مسرحيات', callback_data=msg.sender_id.user_id.."/Cinema4"},
+},
+{
+{text =news, url = "https://t.me/"..Jabwa.username..""},
+},
+}
+local rep = msg.id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg_chat_id.."&caption="..URL.escape(t).."&photo="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown&reply_markup="..JSON.encode(keyboard))
+end
+if Text and Text:match('(%d+)/Cinema4') then
+local UserId = Text:match('(%d+)/Cinema4')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "photo",media = "https://t.me/VC_NE/1188",caption = '* 𖥔 اليك قائمة مسرحية 🎬*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'مدرسة المشاغبين', callback_data=IdUser.."/rioters"},{text = 'كاسك يا وطن', callback_data=IdUser.."/homeland"},
+},
+{
+{text = 'العيال كبرت', callback_data=IdUser.."/Igrewup"},{text = 'ريا وسكينة', callback_data=IdUser.."/Knife"},
+},
+{
+{text = 'الماريشال عمّار', callback_data=IdUser.."/Ammar"},
+},
+{
+{text = 'القائمه الرئيسه', callback_data=IdUser.."/Backcinema"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem1') then
+local UserId = Text:match('(%d+)/Cinem1')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/129",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem2') then
+local UserId = Text:match('(%d+)/Cinem2')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/130",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem3') then
+local UserId = Text:match('(%d+)/Cinem3')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/131",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem4') then
+local UserId = Text:match('(%d+)/Cinem4')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/132",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem5') then
+local UserId = Text:match('(%d+)/Cinem5')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/133",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem6') then
+local UserId = Text:match('(%d+)/Cinem6')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/134",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem7') then
+local UserId = Text:match('(%d+)/Cinem7')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/135",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem8') then
+local UserId = Text:match('(%d+)/Cinem8')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/136",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem9') then
+local UserId = Text:match('(%d+)/Cinem9')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/138",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Cinem10') then
+local UserId = Text:match('(%d+)/Cinem10')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/139",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema1"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/TheMatrix') then
+local UserId = Text:match('(%d+)/TheMatrix')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/141",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema2"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Aliens') then
+local UserId = Text:match('(%d+)/Aliens')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/142",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema2"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Gladiator') then
+local UserId = Text:match('(%d+)/Gladiator')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/144",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema2"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/DieHard') then
+local UserId = Text:match('(%d+)/DieHard')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/143",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema2"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/ThKnight') then
+local UserId = Text:match('(%d+)/ThKnight')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/145",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema2"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/dreads') then
+local UserId = Text:match('(%d+)/dreads')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/146",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema3"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/supernatural') then
+local UserId = Text:match('(%d+)/supernatural')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/147",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema3"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/sponge') then
+local UserId = Text:match('(%d+)/sponge')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/148",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema3"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Ninja') then
+local UserId = Text:match('(%d+)/Ninja')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/149",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema3"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Lion') then
+local UserId = Text:match('(%d+)/Lion')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/150",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛?? ･', callback_data=IdUser.."/Cinema3"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/rioters') then
+local UserId = Text:match('(%d+)/rioters')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/151",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema4"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/homeland') then
+local UserId = Text:match('(%d+)/homeland')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/152",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema4"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Igrewup') then
+local UserId = Text:match('(%d+)/Igrewup')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/153",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema4"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Knife') then
+local UserId = Text:match('(%d+)/Knife')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/154",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema4"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
+end
+if Text and Text:match('(%d+)/Ammar') then
+local UserId = Text:match('(%d+)/Ammar')
+if tonumber(IdUser) == tonumber(UserId) then
+au ={type = "video",media = "https://t.me/DEV_JABWA/155",caption = '*تم تحميل الفيلم بنجاح ✅*\n',parse_mode = "Markdown"}     
+local bain = bot.getUser(IdUser)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '･ 𓆩𝚝𝚒𝚐𝚎𝚛𓆪 ･', callback_data=IdUser.."/Cinema4"},
+},
+{
+{text = bain.first_name, url = "https://t.me/"..bain.username..""},
+},
+}
+local mm = Msg_id/2097152/0.5
+https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..ChatId.."&message_id="..mm.."&media="..JSON.encode(au).."&reply_markup="..JSON.encode(keyboard))
+end 
 end
 if text == "انمي" or text == "انمى" then 
 Abs = math.random(2,140); 
@@ -14522,229 +15001,100 @@ data = {
 }
 return send(msg_chat_id,msg_id,'᯽ عليك استخدام اوامر التحكم بالقوائم',"md",false, false, false, false, reply_markup)
 end
-if Text and Text:match('(%d+)/nsnsks') then
-local UserId = Text:match('(%d+)/nsnsks')
-if tonumber(IdUser) == tonumber(UserId) then
-local bain = bot.getUser(IdUser)
-local txxt = [[*
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-
-𖥔 مرحبا بك هذه اوامر لعبة البنك كالاتي
-
-𖥔 انشاء حساب بنكي  -> تفتح حساب وتقدر تحول فلوس مع مزايا اخري
-
-𖥔 مسح حساب بنكي  -> تلغي حسابك البنكي
-
-𖥔 تحويل -> تطلب رقم حساب الشخص وتحول له فلوس
-
-𖥔 حسابي -> يطلع لك رقم حسابك عشان تعطيه للشخص اللي بيحول لك
-
-𖥔 فلوسي -> يظهرلك عدد فلوسك
-
-𖥔 مسح كل الفلوس -> يمسح فلوس لعبة البنك
-
-𖥔 راتب -> يعطيك راتب كل ١٠ دقائق
-
-𖥔 بخشيش -> يعطيك بخشيش كل ١٠ دقايق
-
-𖥔 زرف -> تزرف فلوس اشخاص كل ١٠ دقايق
-
-𖥔 استثمار -> تستثمر بالمبلغ اللي تريده مع نسبة ربح مضمونه من ١٪؜ الى ١٥٪؜
-
-𖥔 حظ -> تلعبها بأي مبلغ تكسبه ياتخسره انت وحظك
-
-𖥔 مضاربه -> تضارب بأي مبلغ تريده والنسبة من ٩٠٪؜ الى ٩٠٪؜ انت وحظك
-
-𖥔 قرض -> تاخذ قرض من البنك
-
-𖥔 تسديد القرض -> بتسدد القرض اذا عليك 
-
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-*]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '⟨•💖▸ عــربــي² •⟩', callback_data=IdUser.."/nsnsbbl"},
-},
-{
-{text = '⟨•💖▸ 𝙀𝙄??𝙂𝙇??𝙎𝙃 •⟩', callback_data=IdUser.."/fghbdn"},
-},
-{
-{text = bain.first_name, url = "https://t.me/"..bain.username..""},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if text == 'تفعيل الحمايه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:set(bot_id.."lock:Contact"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:Spam"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:Photo"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:forward"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:Link"..msg.chat_id_,'del')
+database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_,'del')  
+database:set(bot_id..'lock:Fshar'..msg.chat_id_,true) 
+database:set(bot_id..'lock:Fars'..msg.chat_id_,true) 
+database:set(bot_id..'Bot:Id:Photo'..msg.chat_id_,true) 
+database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'kick')  
+database:set(bot_id..'lock_edit_med'..msg.chat_id_,true) 
+database:set(bot_id.."lock:inline"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:Video"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:Animation"..msg.chat_id_,'del')  
+database:set(bot_id.."lock:Sticker"..msg.chat_id_,'del')  
+database:set(bot_id..'Bot:Id:Photo'..msg.chat_id_,true) 
+database:set(bot_id.."lock:Video"..msg.chat_id_,'ked')  
+database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'mute')  
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_,' ⦁ تم تعطيل جلب الصوره ،\n ⦁ تم قفل البوتات  ،\n ⦁ تم قفل التكرار ،\n ⦁ تم قفل الروابط ،\n ⦁ تم قفل التوجيه ،\n ⦁ تم قفل الملصقات ،\n ⦁ تم قفل المتحركه ،\n ⦁ تم قفل الفيديو ،\n ⦁ تم قفل الفشار ،\n ⦁ تم قفل الانلاين ،\n ⦁ تم قفل تعديل المديا ،\n ⦁ تم وضع التكرار  ،\n ⦁ تم قفل الفارسيه  ،\n ⦁ تم وضع الايدي بدون صوره ،n  \n ⦁ تم تفعيل الحمايه  بواسطه ، [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..')  ')
+end,nil)   
 end
+if text == 'تعطيل الحمايه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:del(bot_id.."lock:inline"..msg.chat_id_)  
+database:del(bot_id.."lock:Lock:Sexy"..msg.chat_id_)  
+database:hdel(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood")  
+database:set(bot_id..'lock_edit_med'..msg.chat_id_,true) 
+database:del(bot_id..'lock:Fshar'..msg.chat_id_) 
+database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
+database:del(bot_id.."lock:Photo"..msg.chat_id_)  
+database:del(bot_id.."lock:Video"..msg.chat_id_)  
+database:del(bot_id.."lock:Link"..msg.chat_id_)  
+database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
+database:del(bot_id.."lock:Animation"..msg.chat_id_)  
+database:del(bot_id.."lock:forward"..msg.chat_id_)  
+database:del(bot_id..'Bot:Id'..msg.chat_id_) 
+database:del(bot_id..'Bot:Id:Photo'..msg.chat_id_) 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_,' ⦁ تم تفعيل جلب الصوره ،\n ⦁ تم  فتح البوتات  ،\n ⦁ تم  فتح التكرار ،\n ⦁ تم  فتح الروابط ،\n ⦁ تم  فتح التوجيه ،\n ⦁ تم  فتح الملصقات ،\n ⦁ تم  فتح المتحركه ،\n ⦁ تم  فتح الفيديو ،\n ⦁ تم  فتح الفشار ،\n ⦁ تم  فتح الانلاين ،\n ⦁ تم  فتح تعديل المديا ،\n ⦁ تم وضع التكرار  ،\n ⦁ تم  فتح الفارسيه  ،\n ⦁ تم وضع الايدي بصوره،n \n ⦁ تم تفعيل الحمايه  بواسطه ، [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..')  ')
+end,nil)   
 end
-if Text and Text:match('(%d+)/nsnsbbl') then
-local UserId = Text:match('(%d+)/nsnsbbl')
-if tonumber(IdUser) == tonumber(UserId) then
-local bain = bot.getUser(IdUser)
-local txxt = [[*
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-
-𖥔 انشاء كوبون -> ثم ارسل اي رقم يعجبك
-
-𖥔 كوبون -> ارسل الرقم التي انشات
-
-𖥔 حساب -> ايدي حساب الشخص ف البنك
-
-𖥔 مسح حساب -> ايدي الحساب يقوم بمسح حسابك البنكي
-
-𖥔 هجوم -> تهجم عالخصم مع زيادة نسبة كل هجوم
-
-𖥔 مراهنه -> تحط مبلغ وتراهن عليه
-
-𖥔 كنز -> يعطيك كنز بسعر مختلف انتا وحظك
-
-𖥔 توب الفلوس -> يطلع توب اكثر ناس لديهم فلوس بكل الجروبات
-
-𖥔 توب الحراميه -> يطلع لك اكثر ناس زرفوا
-
-𖥔 زواج -> تكتبه بالرد على رسالة شخص مع المهر ويزوجك
-
-𖥔 زواجي -> يطلع وثيقة زواجك اذا متزوج
-
-𖥔 طلاق -> يطلقك اذا متزوج
-
-𖥔 خلع -> يخلع زوجك ويرجع له المهر
-
-?? زواجات -> يطلع اغلى ٢٠ زواجات
-
-𖥔 ترتيبي -> يطلع ترتيبك باللعبة
-
-𖥔 شراء رتبه -> لكي تشتري رتبه ف المجموعه
-
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-*]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '⟨•💖▸ عــربــي¹ •⟩', callback_data=IdUser.."/nsnsks"},
-},
-{
-{text = '⟨•💖▸ 𝙀𝙄𝙉𝙂𝙇𝙄𝙎𝙃 •⟩', callback_data=IdUser.."/fghbdn"},
-},
-{
-{text = bain.first_name, url = "https://t.me/"..bain.username..""},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if text == 'تفعيل الحمايه القصوه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:set(bot_id.."lock:text"..msg.chat_id_,true) 
+database:set(bot_id.."lock:AddMempar"..msg.chat_id_,'kick')
+database:set(bot_id.."lock:Join"..msg.chat_id_,'kick')
+database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'kick')
+database:set(bot_id.."lockpin"..msg.chat_id_, true) 
+database:sadd(bot_id..'lock:pin',msg.chat_id_) 
+database:set(bot_id..'lock:tagservr'..msg.chat_id_,true)  
+database:set(bot_id..'lock:Fars'..msg.chat_id_,true) 
+database:set(bot_id..'lock:Fshar'..msg.chat_id_,true)
+database:set(bot_id..'lock:edit'..msg.chat_id_,true) 
+database:set(bot_id.."lock:inline"..msg.chat_id_,'del')
+database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_,'del')
+database:del(bot_id.."pp_photo:status"..msg.chat_id_) 
+database:del(bot_id.."my_photo:status"..msg.chat_id_) 
+database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'keed')  
+database:set(bot_id.."lock:Contact"..msg.chat_id_,'ked')  
+database:set(bot_id.."lock:Spam"..msg.chat_id_,'ked')  
+database:set(bot_id.."lock:forward"..msg.chat_id_,'ked')  
+database:set(bot_id.."lock:Keyboard"..msg.chat_id_,'ked')  
+database:set(bot_id..'Bot:Id:Photo'..msg.chat_id_,true) 
+database:set(bot_id..'Bot:Id:Photo'..msg.chat_id_,true) 
+database:set(bot_id.."lock:Photo"..msg.chat_id_,'ked')  
+database:set(bot_id.."lock:geam"..msg.chat_id_,'ked')  
+database:set(bot_id.."lock:Sticker"..msg.chat_id_,'ktm')  
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_,'تم قفل الحمايه كامله\nتحظير هذا الحمايه تقفل كل حاجه بلتقييد\nتفعيل الحمايه دي بس عند التفليش او التحفيل\nلتعطيل الحمايه القصوه\nاكتب تعطيل الحمايه القوصه\n تم تفعيل الحمايه القصوه من قبل [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..')  ')
+end,nil)   
 end
-end
-if Text and Text:match('(%d+)/fghbdn') then
-local UserId = Text:match('(%d+)/fghbdn')
-if tonumber(IdUser) == tonumber(UserId) then
-local bain = bot.getUser(IdUser)
-local txxt = [[*
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-
-𖥔 marhaban bik hadhih awamir luebat albank kalati
-
-𖥔 ansha' hisab banki -> taftah hisab watuqadar fulus mae mazaya akhari
-
-𖥔 mash hisab banki -> tulghi hisabak albankia
-
-𖥔 tahwil -> tatlub raqm hisab alshakhs watahawal lah fulus
-
-𖥔 hisaabi -> yattlie lak hisabuk fi eashan tuetih lilshakhs allly bihuwwl lak
-
-𖥔 fulusi -> yazhriluk eadad fulusik
-
-𖥔 mash kuli alfulus -> yamsah fulus luebat albank
-
-𖥔 ratib -> yuetik ratib kuli 10 daqayiq
-
-𖥔 bikhashish -> yuetik bikhashish kula 10 daqayiq
-
-𖥔 zarf -> tazraf fulus ashkhas kula 10 daqayiq
-
-𖥔 astithmar -> tustathmar bialmablagh aladhi turiduh mae nisbat ribh madmunuh min 1 % ؜ alaa 15 % ؜
-
-𖥔 hazun -> taleabuha bi'ayi mablagh taksibuh yatakhsiruh ant wahazak
-
-𖥔 madaribuh -> tadarib bi'ayi mablagh turiduh walnisbat min 90 % ؜ alaa 90 % ؜ ant wahzak
-
-𖥔 qard -> takhidh qard min albank
-
-𖥔 tasdid alqard -> bitasadad alqard adhan ealayk
-
-𖥔 ansha' kubun -> arsul ay raqm yuejibuk
-
-𖥔 kubun -> arsul alraqm alati anshat
-
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-*]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '⟨•💖▸ عــربــي •⟩', callback_data=IdUser.."/nsnsks"},
-},
-{
-{text = '⟨•💖▸ 𝙀𝙄𝙉𝙂𝙇𝙄𝙎𝙃² •⟩', callback_data=IdUser.."/kanapdm"},
-},
-{
-{text = bain.first_name, url = "https://t.me/"..bain.username..""},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/kanapdm') then
-local UserId = Text:match('(%d+)/kanapdm')
-if tonumber(IdUser) == tonumber(UserId) then
-local bain = bot.getUser(IdUser)
-local txxt = [[*
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-
-𖥔 hisab -> aydi hisaab alshakhs f albank
-
-𖥔 mash hisab -> yad alhisab bimash hisabik albankii
-
-𖥔 hujum -> tahjum ealkhasm mae ziadat nisbat kuli hujum
-
-𖥔 marahinuh -> tahutu mablagh waturahin ealayh
-
-𖥔 kanz -> yuetik kanz bisier mukhtalif anta wahazak
-
-𖥔 tub alfulus -> yatlue tub akthur nas fulus bikuli aljurubat
-
-𖥔 tub alharamih -> yatlie lak akthur nas zurafuu
-
-𖥔 zawaj -> taktubuh bialradi ealaa risalat shakhs mae almahrujik
-
-𖥔 zawaji -> yatlue wathiqat zawajik adha mutazawij
-
-𖥔 talaq -> yutliquk adha mutazawij
-
-𖥔 khale -> yakhlae zawjak wayarjie lah almahr
-
-𖥔 zawaajat -> yatlue aghlaa 20 zawajat
-
-𖥔 tartibi -> yatlie tartibik biallueba
-
-𖥔 shira' rutabih -> likay tashtari ratabah almajmueuh
-
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-*]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '⟨•💖▸ عــربــي •⟩', callback_data=IdUser.."/nsnsks"},
-},
-{
-{text = '⟨•💖▸ 𝙀𝙄𝙉𝙂𝙇𝙄𝙎𝙃¹ •⟩', callback_data=IdUser.."/fghbdn"},
-},
-{
-{text = bain.first_name, url = "https://t.me/"..bain.username..""},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
+if text == 'تعطيل الحمايه القصوه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:del(bot_id.."lock:Spam"..msg.chat_id_)  
+database:del(bot_id.."lock:Join"..msg.chat_id_)  
+database:del(bot_id.."lock:text"..msg.chat_id_)  
+database:del(bot_id.."lock:AddMempar"..msg.chat_id_)  
+database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
+database:del(bot_id..'lock:edit'..msg.chat_id_)
+database:del(bot_id.."lockpin"..msg.chat_id_)  
+database:del(bot_id..'lock:Fshar'..msg.chat_id_) 
+database:del(bot_id..'lock:Fars'..msg.chat_id_) 
+database:del(bot_id.."lock:Link"..msg.chat_id_)  
+database:del(bot_id..'sing:for:me'..msg.chat_id_)  
+database:del(bot_id.."lock:Photo"..msg.chat_id_)  
+database:del(bot_id.."lock:Video"..msg.chat_id_)  
+database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
+database:del(bot_id.."lock:forward"..msg.chat_id_)  
+database:del(bot_id.."lock:geam"..msg.chat_id_)  
+database:del(bot_id..'Bot:Id:Photo'..msg.chat_id_) 
+database:set(bot_id.."pp_photo:status"..msg.chat_id_,true) 
+database:set(bot_id.."my_photo:status"..msg.chat_id_,true) 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_,'  تم تعطيل الحمايه القصوه من قبل    [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..')  ')
+end,nil)   
 end
 if text == 'تحديث' then
 if not msg.ControllerBot then 
@@ -15320,484 +15670,7 @@ https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg.
 --return send(msg_chat_id,msg_id,"᯽ اسرع واحد يرتبها ~ {"..name.."}","md",true)  
 end
 end
-if Text and Text:match('(%d+)/bank') then
-local UserId = Text:match('(%d+)/bank')
-if tonumber(IdUser) == tonumber(UserId) then
-local bain = bot.getUser(IdUser)
-local txxt = [[*
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-    
-𖥔 مرحبا بك هذه اوامر لعبه البنك 
-    
- 𖥔 انشاء حساب بنكي  ~ تفتح حساب وتقدر تحول فلوس مع مزايا اخري
-    
- 𖥔 مسح حساب بنكي  ~ تلغي حسابك البنكي
-    
- 𖥔 تحويل ~ تطلب رقم حساب الشخص وتحول له فلوس
-    
- 𖥔 حسابي ~ يطلع لك رقم حسابك عشان تعطيه للشخص اللي بيحول لك
-    
- 𖥔 فلوسي ~ يظهرلك عدد فلوسك
-    
- 𖥔 راتب ~ يعطيك راتب كل ١٠ دقائق
-    
- 𖥔 بخشيش ~ يعطيك بخشيش كل ١٠ دقايق
-    
- 𖥔 زرف ~ تزرف فلوس اشخاص كل ١٠ دقايق
-    
- 𖥔 استثمار ~ تستثمر بالمبلغ اللي تريده مع نسبة ربح مضمونه من ١٪؜ الى ١٥٪؜
-    
- 𖥔 حظ ~ تلعبها بأي مبلغ تكسبه ياتخسره انت وحظك
-    
- 𖥔 مضاربه ~ تضارب بأي مبلغ تريده والنسبة من ٩٠٪؜ الى ٩٠٪؜ انت وحظك
-    
- 𖥔 قرض ~ تاخذ قرض من البنك
-    
- 𖥔 تسديد القرض ~ بتسدد القرض اذا عليك 
-    
- 𖥔 هجوم ~ تهجم عالخصم مع زيادة نسبة كل هجوم
 
- 𖥔 كنز ~ يعطيك كنز بسعر مختلف انتا وحظك
-    
- 𖥔 توب الفلوس ~ يطلع توب اكثر ناس لديهم فلوس بكل الجروبات
-    
- 𖥔 توب الحراميه ~ يطلع لك اكثر ناس زرفوا
-    
- 𖥔 زواج ~ تكتبه بالرد على رسالة شخص مع المهر ويزوجك
-    
- 𖥔 زواجي ~ يطلع وثيقة زواجك اذا متزوج
-    
- 𖥔 طلاق ~ يطلقك اذا متزوج
-    
- 𖥔 خلع ~ يخلع زوجك ويرجع له المهر
-    
- 𖥔 زواجات ~ يطلع اغلى ٢٠ زواجات
-    
- 𖥔 ترتيبي ~ يطلع ترتيبك باللعبة
-    
- 𖥔 شراء رتبه ~ لكي تشتري رتبه ف المجموعه
-    
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-*]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '･ 𓆩𝑲𝒊𝒏𝑮𓆪 ･', callback_data=IdUser.."/backgames"},
-},
-{
-{text = bain.first_name, url = "https://t.me/"..bain.username..""},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/backgames') then
-local UserId = Text:match('(%d+)/backgames')
-if tonumber(IdUser) == tonumber(UserId) then
-local bain = bot.getUser(IdUser)
-local txxt = [[*
- 𖥔 اليك قسم الالعاب من سورس كينج
-━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━
-*]]
- keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '𖥔 الالعاب التسليه 𖥔', callback_data=IdUser.."/normgm"},
-},
-{
-{text = '𖥔 الالعاب الالكترونيه 𖥔', callback_data=IdUser.."/dejgm"},
-},
-{
-{text = '𖥔 اوامر لعبة البنك 𖥔', callback_data=IdUser.."/bank"},
-},
-{
-{text  = '• قناة السورس •', url = "t.me/TGe_R"}, 
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if text == "الاسرع" or text == "ترتيب" then
-if Redis:get(black.."Status:Games"..msg.chat_id) then
-KlamSpeed = {"سحور","سياره","استقبال","قنفذ","ايفون","بزونه","مطبخ","كرستيانو","دجاجه","مدرسه","الوان","غرفه","ثلاجه","قهوه","سفينه","بلاك","محطه","طياره","رادار","منزل","مستشفى","كهرباء","تفاحه","اخطبوط","سلمون","فرنسا","برتقاله","تفاح","مطرقه","لعبه","شباك","باص","سمكه","ذباب","تلفاز","حاسوب","انترنت","ساحه","جسر"};
-name = KlamSpeed[math.random(#KlamSpeed)]
-Redis:set(black.."Game:Monotonous"..msg.chat_id,name)
-name = string.gsub(name,"سحور","س ر و ح")
-name = string.gsub(name,"سياره","ه ر س ي ا")
-name = string.gsub(name,"استقبال","ل ب ا ت ق س ا")
-name = string.gsub(name,"قنفذ","ذ ق ن ف")
-name = string.gsub(name,"ايفون","و ن ف ا")
-name = string.gsub(name,"بلاك","ر و ف ر ي")
-name = string.gsub(name,"مطبخ","خ ب ط م")
-name = string.gsub(name,"كرستيانو","س ت ا ن و ك ر ي")
-name = string.gsub(name,"دجاجه","ج ج ا د ه")
-name = string.gsub(name,"مدرسه","ه م د ر س")
-name = string.gsub(name,"الوان","ن ا و ا ل")
-name = string.gsub(name,"غرفه","غ ه ر ف")
-name = string.gsub(name,"ثلاجه","ج ه ت ل ا")
-name = string.gsub(name,"قهوه","ه ق ه و")
-name = string.gsub(name,"سفينه","ه ن ف ي س")
-name = string.gsub(name,"محطه","ه ط م ح")
-name = string.gsub(name,"طياره","ر ا ط ي ه")
-name = string.gsub(name,"رادار","ر ا ر ا د")
-name = string.gsub(name,"منزل","ن ز م ل")
-name = string.gsub(name,"مستشفى","ى ش س ف ت م")
-name = string.gsub(name,"كهرباء","ر ب ك ه ا ء")
-name = string.gsub(name,"تفاحه","ح ه ا ت ف")
-name = string.gsub(name,"اخطبوط","ط ب و ا خ ط")
-name = string.gsub(name,"سلمون","ن م و ل س")
-name = string.gsub(name,"فرنسا","ن ف ر س ا")
-name = string.gsub(name,"برتقاله","ر ت ق ب ا ه ل")
-name = string.gsub(name,"تفاح","ح ف ا ت")
-name = string.gsub(name,"مطرقه","ه ط م ر ق")
-name = string.gsub(name,"مصر","ص م ر")
-name = string.gsub(name,"لعبه","ع ل ه ب")
-name = string.gsub(name,"شباك","ب ش ا ك")
-name = string.gsub(name,"باص","ص ا ب")
-name = string.gsub(name,"سمكه","ك س م ه")
-name = string.gsub(name,"ذباب","ب ا ب ذ")
-name = string.gsub(name,"تلفاز","ت ف ل ز ا")
-name = string.gsub(name,"حاسوب","س ا ح و ب")
-name = string.gsub(name,"انترنت","ا ت ن ن  ر ت")
-name = string.gsub(name,"ساحه","ح ا ه س")
-name = string.gsub(name,"جسر","ر ج س")
-return send(msg_chat_id,msg_id,"᯽ اسرع واحد يرتبها ~ {"..name.."}","md",true)  
-end
-end
-if text == "خيروك" or text == "لو خيروك" then
-if Redis:get(black.."Status:Games"..msg.chat_id) then
-local texting = {
-"الو خيروك بين البقاء مدى الحياة مع أخيك أو البقاء مدى الحياة مع حبيبك من تختار؟",
-"لو عرضوا عليك السفر لمدة 20 عام مع شخص واحد فقط من تختار؟",
-"امن تحب أكثر والدك أم والدتك؟",
-"الو خيروك بين إعطاء هدية باهظة الثمن لفرد من أفراد أسرتك من تختار؟",
-"لو خيروك بين الذكاء أو الثراء ماذا تختار؟",
-"لو خيروك بين الزواج من شخص تحبه أو شخص سيحقق لك جميع أحلامك من تختار؟",
-"الو خيروك بين المكوث مدى الحياة مع صديقك المفضل أو مع حبيبك من تختار؟",
-"الو خيروك بين الشهادة الجامعية أو السفر حول العالم؟",
-"الو خيروك بين العيش في نيويورك أو في لندن أيهما تختار؟",
-"لو خيروك بين العودة إلى الماضي أو الذهاب إلى المستقبل أيهما تختار؟",
-"لو خيروك بين تمتع شريك حياتك بصفة من الأثنين الطيبة أو حسن التصرف أيهما تختار؟",
-"لو خيروك بين الزواج من شخص في عمرك فقير أو شخص يكبرك بعشرين عام غني من تختار",
-"لو خيروك بين قتلك بالسم أو قتلك بالمسدس ماذا تختار؟",
-"لو خيروك بين إنقاذ والدك أو إنقاذ والدتك من تختار؟",
-}
-return send(msg_chat_id,msg_id,texting[math.random(#texting)],'md')
-end
-end
-if Text and Text:match('(%d+)/master') then
-local UserId = Text:match('(%d+)/master')
-if tonumber(IdUser) == tonumber(UserId) then
-creditcc = math.random(5000000000000000,5999999999999999);
-mast = "الاهلي"
-balas = 50
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = ""..ban.first_name..""
-else
-news = " لا يوجد"
-end
-local banid = IdUser
-Redis:set(black.."bobna"..IdUser,news)
-Redis:set(black.."boob"..IdUser,balas)
-Redis:set(black.."boobb"..IdUser,creditcc)
-Redis:set(black.."bbobb"..IdUser,mast)
-Redis:set(black.."boballname"..creditcc,news)
-Redis:set(black.."boballbalc"..creditcc,balas)
-Redis:set(black.."boballcc"..creditcc,creditcc)
-Redis:set(black.."boballban"..creditcc,mast)
-Redis:set(black.."boballid"..creditcc,banid)
-Redis:sadd(black.."booob",IdUser)
-local txxt = '*𖥔 اختر شخصيتك في اللعبة ↑↓*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'شخصية طيبة 😇', callback_data=IdUser.."/msalm"},{text = 'شخصية شريرة 😈', callback_data=IdUser.."/shrer"},
-},
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/visaa') then
-local UserId = Text:match('(%d+)/visaa')
-if tonumber(IdUser) == tonumber(UserId) then
-creditcc = math.random(4000000000000000,4999999999999999);
-visssa = "الرافدين"
-balas = 50
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = ""..ban.first_name..""
-else
-news = " لا يوجد"
-end
-local banid = IdUser
-Redis:set(black.."bobna"..IdUser,news)
-Redis:set(black.."boob"..IdUser,balas)
-Redis:set(black.."boobb"..IdUser,creditvi)
-Redis:set(black.."bbobb"..IdUser,visssa)
-Redis:set(black.."boballname"..creditvi,news)
-Redis:set(black.."boballbalc"..creditvi,balas)
-Redis:set(black.."boballcc"..creditvi,creditvi)
-Redis:set(black.."boballban"..creditvi,visssa)
-Redis:set(black.."boballid"..creditvi,banid)
-Redis:sadd(black.."booob",IdUser)
-local txxt = '*𖥔 اختر شخصيتك في اللعبة ↑↓*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'شخصية طيبة 😇', callback_data=IdUser.."/msalm"},{text = 'شخصية شريرة 😈', callback_data=IdUser.."/shrer"},
-},
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/express') then
-local UserId = Text:match('(%d+)/express')
-if tonumber(IdUser) == tonumber(UserId) then
-creditcc = math.random(6000000000000000,6999999999999999);
-exprs = "كينج"
-balas = 50
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = ""..ban.first_name..""
-else
-news = " لا يوجد"
-end
-local banid = IdUser
-Redis:set(black.."bobna"..IdUser,news)
-Redis:set(black.."boob"..IdUser,balas)
-Redis:set(black.."boobb"..IdUser,creditex)
-Redis:set(black.."bbobb"..IdUser,exprs)
-Redis:set(black.."boballname"..creditex,news)
-Redis:set(black.."boballbalc"..creditex,balas)
-Redis:set(black.."boballcc"..creditex,creditex)
-Redis:set(black.."boballban"..creditex,exprs)
-Redis:set(black.."boballid"..creditex,banid)
-Redis:sadd(black.."booob",IdUser)
-local txxt = '*𖥔 اختر شخصيتك في اللعبة ↑↓*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'شخصية طيبة 😇', callback_data=IdUser.."/msalm"},{text = 'شخصية شريرة 😈', callback_data=IdUser.."/shrer"},
-},
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/msalm') then
-local UserId = Text:match('(%d+)/msalm')
-if tonumber(IdUser) == tonumber(UserId) then
-shakse = "طيبة"
-Redis:set(black.."shkse"..IdUser,shakse)
-cccall = Redis:get(black.."boobb"..IdUser)
-ccctype = Redis:get(black.."bbobb"..IdUser)
-txxt = "🏦 تم انشاء حساب بنكي بنجاح ✅\n𖥔 وشحنالك 50 جنيه هدي\n𖥔 رقم حسابك -> ( `"..cccall.."` )\n𖥔 نوع البطاقة -> ( "..ccctype.." )\n𖥔 فلوسك -> ( 50 جنيه 💵 )\n𖥔 شخصيتك -> طيبة 😇"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/shrer') then
-local UserId = Text:match('(%d+)/shrer')
-if tonumber(IdUser) == tonumber(UserId) then
-shakse = "شريرة"
-Redis:set(black.."shkse"..IdUser,shakse)
-cccall = Redis:get(black.."boobb"..IdUser)
-ccctype = Redis:get(black.."bbobb"..IdUser)
-txxt = "🏦 تم انشاء حساب بنكي بنجاح ✅\n𖥔 وشحنالك 50 جنيه هدي\n𖥔 رقم حسابك -> ( `"..cccall.."` )\n𖥔 نوع البطاقة -> ( "..ccctype.." )\n𖥔 فلوسك -> ( 50 جنيه 💵 )\n𖥔 شخصيتك -> شريرة 😈"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/toptop') then
-local UserId = Text:match('(%d+)/toptop')
-if tonumber(IdUser) == tonumber(UserId) then
-local toptop = "𖥔 اهلين فيك في قوائم التوب\nللمزيد من التفاصيل - [@TGe_R]\n✦"
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'الزرف', data = IdUser..'/topzrf'},{text = 'الفلوس', data = IdUser..'/topmon'},{text = 'زواجات', data = IdUser..'/zoztee'},
-},
-{
-{text = 'المتبرعين', data = IdUser..'/motbra'},{text = 'الشركات', data = IdUser..'/shrkatt'},
-},
-{
-{text = 'اخفاء', data = IdUser..'/delAmr'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •', url="t.me/TGe_R"},
-},
-}
-}
-return edit(ChatId,Msg_id,toptop, 'md', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/shrkatt') then
-local UserId = Text:match('(%d+)/shrkatt')
-if tonumber(IdUser) == tonumber(UserId) then
-local companys = Redis:smembers(black.."companys:")
-if #companys == 0 then
-return bot.sendText(chat_id,msg_id,"𖥔 لا يوجد شركات","md",true)
-end
-local top_company = {}
-for A,N in pairs(companys) do
-local Cmony = 0
-for k,v in pairs(Redis:smembers(black.."company:mem:"..N)) do
-local mem_mony = tonumber(Redis:get(black.."boob"..v)) or 0
-Cmony = Cmony + mem_mony
-end
-local owner_id = Redis:get(black.."companys_owner:"..N)
-local Cid = Redis:get(black.."companys_id:"..N)
-table.insert(top_company, {tonumber(Cmony) , owner_id , N , Cid})
-end
-table.sort(top_company, function(a, b) return a[1] > b[1] end)
-local num = 1
-local emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)"
-}
-local msg_text = "𖥔 توب اعلى 20 شركة ↑↓ \n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-for k,v in pairs(top_company) do
-if num <= 20 then
-local user_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-local Cname = v[3]
-local Cid = v[4]
-local mony = v[1]
-gflous = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-local emoo = emoji[k]
-num = num + 1
-msg_text = msg_text..emoo.." "..gflous.."  💵 l "..Cname.."\n"
-gg = "━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-end
-end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'رجوع ↪️', data = IdUser..'/toptop'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-}
-return edit(ChatId,Msg_id,msg_text..gg, 'html', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/motbra') then
-local UserId = Text:match('(%d+)/motbra')
-if tonumber(IdUser) == tonumber(UserId) then
-  local F_Name = bot.getUser(IdUser).first_name
-Redis:set(black..IdUser.."first_name:", F_Name)
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = "["..ban.first_name.."]("..ban.first_name..")"
-else
-news = " لا يوجد"
-end
-ballancee = Redis:get(black.."tabbroat"..IdUser) or 0
-local bank_users = Redis:smembers(black.."taza")
-if #bank_users == 0 then
-return bot.sendText(chat_id,msg_id,"𖥔 لا يوجد حسابات في البنك","md",true)
-end
-top_mony = "𖥔 توب اعلى 20 شخص بالتبرعات ↑↓\n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-tabr_list = {}
-for k,v in pairs(bank_users) do
-local mony = Redis:get(black.."tabbroat"..v)
-table.insert(tabr_list, {tonumber(mony) , v})
-end
-table.sort(tabr_list, function(a, b) return a[1] > b[1] end)
-num = 1
-emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)"
-}
-for k,v in pairs(tabr_list) do
-if num <= 20 then
-local user_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-tt =  "["..user_name.."]("..user_name..")"
-local mony = v[1]
-local convert_mony = string.format("%.0f",mony)
-local emo = emoji[k]
-num = num + 1
-gflos = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-top_mony = top_mony..emo.." "..gflos.." 💵 l "..tt.." \n"
-gflous = string.format("%.0f", ballancee):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-gg = " ━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n𖥔 you -> "..gflous.." 💵 l "..news.." \n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-end
-end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •', url = 't.me/TGe_R'}, 
-},
-}
-}
-return bot.sendText(msg.chat_id,msg.id,top_mony..gg,"md",false, false, false, false, reply_markup)
-end
 if text == "صراحه" or text == "جرأه" then
 if Redis:get(black.."Status:Games"..msg.chat_id) then
 local texting = {
@@ -15892,772 +15765,7 @@ return send(msg_chat_id,msg_id,"᯽ اسرع واحد يرسل اسم الدول
 end
 end
 
-if Text and Text:match('(%d+)/master') then
-local UserId = Text:match('(%d+)/master')
-if tonumber(IdUser) == tonumber(UserId) then
-creditcc = math.random(5000000000000000,5999999999999999);
-mast = "الاهلي"
-balas = 50
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = ""..ban.first_name..""
-else
-news = " لا يوجد"
-end
-local banid = IdUser
-Redis:set(black.."bobna"..IdUser,news)
-Redis:set(black.."boob"..IdUser,balas)
-Redis:set(black.."boobb"..IdUser,creditcc)
-Redis:set(black.."bbobb"..IdUser,mast)
-Redis:set(black.."boballname"..creditcc,news)
-Redis:set(black.."boballbalc"..creditcc,balas)
-Redis:set(black.."boballcc"..creditcc,creditcc)
-Redis:set(black.."boballban"..creditcc,mast)
-Redis:set(black.."boballid"..creditcc,banid)
-Redis:sadd(black.."booob",IdUser)
-local txxt = '*𖥔 اختر شخصيتك في اللعبة ↑↓*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'شخصية طيبة 😇', callback_data=IdUser.."/msalm"},{text = 'شخصية شريرة 😈', callback_data=IdUser.."/shrer"},
-},
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/visaa') then
-local UserId = Text:match('(%d+)/visaa')
-if tonumber(IdUser) == tonumber(UserId) then
-creditcc = math.random(4000000000000000,4999999999999999);
-visssa = "الرافدين"
-balas = 50
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = ""..ban.first_name..""
-else
-news = " لا يوجد"
-end
-local banid = IdUser
-Redis:set(black.."bobna"..IdUser,news)
-Redis:set(black.."boob"..IdUser,balas)
-Redis:set(black.."boobb"..IdUser,creditvi)
-Redis:set(black.."bbobb"..IdUser,visssa)
-Redis:set(black.."boballname"..creditvi,news)
-Redis:set(black.."boballbalc"..creditvi,balas)
-Redis:set(black.."boballcc"..creditvi,creditvi)
-Redis:set(black.."boballban"..creditvi,visssa)
-Redis:set(black.."boballid"..creditvi,banid)
-Redis:sadd(black.."booob",IdUser)
-local txxt = '*𖥔 اختر شخصيتك في اللعبة ↑↓*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'شخصية طيبة 😇', callback_data=IdUser.."/msalm"},{text = 'شخصية شريرة 😈', callback_data=IdUser.."/shrer"},
-},
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/express') then
-local UserId = Text:match('(%d+)/express')
-if tonumber(IdUser) == tonumber(UserId) then
-creditcc = math.random(6000000000000000,6999999999999999);
-exprs = "كينج"
-balas = 50
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = ""..ban.first_name..""
-else
-news = " لا يوجد"
-end
-local banid = IdUser
-Redis:set(black.."bobna"..IdUser,news)
-Redis:set(black.."boob"..IdUser,balas)
-Redis:set(black.."boobb"..IdUser,creditex)
-Redis:set(black.."bbobb"..IdUser,exprs)
-Redis:set(black.."boballname"..creditex,news)
-Redis:set(black.."boballbalc"..creditex,balas)
-Redis:set(black.."boballcc"..creditex,creditex)
-Redis:set(black.."boballban"..creditex,exprs)
-Redis:set(black.."boballid"..creditex,banid)
-Redis:sadd(black.."booob",IdUser)
-local txxt = '*𖥔 اختر شخصيتك في اللعبة ↑↓*'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'شخصية طيبة 😇', callback_data=IdUser.."/msalm"},{text = 'شخصية شريرة 😈', callback_data=IdUser.."/shrer"},
-},
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/msalm') then
-local UserId = Text:match('(%d+)/msalm')
-if tonumber(IdUser) == tonumber(UserId) then
-shakse = "طيبة"
-Redis:set(black.."shkse"..IdUser,shakse)
-cccall = Redis:get(black.."boobb"..IdUser)
-ccctype = Redis:get(black.."bbobb"..IdUser)
-txxt = "🏦 تم انشاء حساب بنكي بنجاح ✅\n𖥔 وشحنالك 50 جنيه هدي\n𖥔 رقم حسابك -> ( `"..cccall.."` )\n𖥔 نوع البطاقة -> ( "..ccctype.." )\n𖥔 فلوسك -> ( 50 جنيه 💵 )\n𖥔 شخصيتك -> طيبة 😇"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/shrer') then
-local UserId = Text:match('(%d+)/shrer')
-if tonumber(IdUser) == tonumber(UserId) then
-shakse = "شريرة"
-Redis:set(black.."shkse"..IdUser,shakse)
-cccall = Redis:get(black.."boobb"..IdUser)
-ccctype = Redis:get(black.."bbobb"..IdUser)
-txxt = "🏦 تم انشاء حساب بنكي بنجاح ✅\n𖥔 وشحنالك 50 جنيه هدي\n𖥔 رقم حسابك -> ( `"..cccall.."` )\n𖥔 نوع البطاقة -> ( "..ccctype.." )\n𖥔 فلوسك -> ( 50 جنيه 💵 )\n𖥔 شخصيتك -> شريرة 😈"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text='• قناة السورس •',url="t.me/TGe_R"},
-},
-}
-local mm = Msg_id/2097152/0.5
-return https.request("https://api.telegram.org/bot"..Token..'/EditMessagecaption?chat_id='..ChatId..'&message_id='..mm..'&caption=' .. URL.escape(txxt).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-if Text and Text:match('(%d+)/toptop') then
-local UserId = Text:match('(%d+)/toptop')
-if tonumber(IdUser) == tonumber(UserId) then
-local toptop = "𖥔 اهلين فيك في قوائم التوب\nللمزيد من التفاصيل - [@TGe_R]\n✦"
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'الزرف', data = IdUser..'/topzrf'},{text = 'الفلوس', data = IdUser..'/topmon'},{text = 'زواجات', data = IdUser..'/zoztee'},
-},
-{
-{text = 'المتبرعين', data = IdUser..'/motbra'},{text = 'الشركات', data = IdUser..'/shrkatt'},
-},
-{
-{text = 'اخفاء', data = IdUser..'/delAmr'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •', url="t.me/TGe_R"},
-},
-}
-}
-return edit(ChatId,Msg_id,toptop, 'md', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/shrkatt') then
-local UserId = Text:match('(%d+)/shrkatt')
-if tonumber(IdUser) == tonumber(UserId) then
-local companys = Redis:smembers(black.."companys:")
-if #companys == 0 then
-return bot.sendText(chat_id,msg_id,"𖥔 لا يوجد شركات","md",true)
-end
-local top_company = {}
-for A,N in pairs(companys) do
-local Cmony = 0
-for k,v in pairs(Redis:smembers(black.."company:mem:"..N)) do
-local mem_mony = tonumber(Redis:get(black.."boob"..v)) or 0
-Cmony = Cmony + mem_mony
-end
-local owner_id = Redis:get(black.."companys_owner:"..N)
-local Cid = Redis:get(black.."companys_id:"..N)
-table.insert(top_company, {tonumber(Cmony) , owner_id , N , Cid})
-end
-table.sort(top_company, function(a, b) return a[1] > b[1] end)
-local num = 1
-local emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)"
-}
-local msg_text = "𖥔 توب اعلى 20 شركة ↑↓ \n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-for k,v in pairs(top_company) do
-if num <= 20 then
-local user_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-local Cname = v[3]
-local Cid = v[4]
-local mony = v[1]
-gflous = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-local emoo = emoji[k]
-num = num + 1
-msg_text = msg_text..emoo.." "..gflous.."  💵 l "..Cname.."\n"
-gg = "━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-end
-end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'رجوع ↪️', data = IdUser..'/toptop'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-}
-return edit(ChatId,Msg_id,msg_text..gg, 'html', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/motbra') then
-local UserId = Text:match('(%d+)/motbra')
-if tonumber(IdUser) == tonumber(UserId) then
-  local F_Name = bot.getUser(IdUser).first_name
-Redis:set(black..IdUser.."first_name:", F_Name)
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = "["..ban.first_name.."]("..ban.first_name..")"
-else
-news = " لا يوجد"
-end
-ballancee = Redis:get(black.."tabbroat"..IdUser) or 0
-local bank_users = Redis:smembers(black.."taza")
-if #bank_users == 0 then
-return bot.sendText(chat_id,msg_id,"𖥔 لا يوجد حسابات في البنك","md",true)
-end
-top_mony = "𖥔 توب اعلى 20 شخص بالتبرعات ↑↓\n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-tabr_list = {}
-for k,v in pairs(bank_users) do
-local mony = Redis:get(black.."tabbroat"..v)
-table.insert(tabr_list, {tonumber(mony) , v})
-end
-table.sort(tabr_list, function(a, b) return a[1] > b[1] end)
-num = 1
-emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)"
-}
-for k,v in pairs(tabr_list) do
-if num <= 20 then
-local user_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-tt =  "["..user_name.."]("..user_name..")"
-local mony = v[1]
-local convert_mony = string.format("%.0f",mony)
-local emo = emoji[k]
-num = num + 1
-gflos = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-top_mony = top_mony..emo.." "..gflos.." 💵 l "..tt.." \n"
-gflous = string.format("%.0f", ballancee):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-gg = " ━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n𖥔 you -> "..gflous.." 💵 l "..news.." \n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-end
-end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'رجوع ↪️', data = IdUser..'/toptop'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-}
-return edit(ChatId,Msg_id,top_mony..gg, 'md', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/zoztee') then
-local UserId = Text:match('(%d+)/zoztee')
-if tonumber(IdUser) == tonumber(UserId) then
-  local zwag_users = Redis:smembers(black.."roogg1")
-  if #zwag_users == 0 then
-  return bot.editMessageText(chat_id,msg_id,"𖥔 مافي زواجات حاليا","md",true)
-  end
-  top_zwag = "𖥔 توب 30 اغلى زواجات ↑↓\n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-  zwag_list = {}
-  for k,v in pairs(zwag_users) do
-  local mahr = Redis:get(black.."rahr1"..v)
-  local zwga = Redis:get(black.."rooga1"..v)
-  table.insert(zwag_list, {tonumber(mahr) , v , zwga})
-  end
-  table.sort(zwag_list, function(a, b) return a[1] > b[1] end)
-  znum = 1
-  zwag_emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)",
-"21)",
-"22)",
-"23)",
-"24)",
-"25)",
-"26)",
-"27)",
-"28)",
-"29)",
-"30)"
-  }
-  for k,v in pairs(zwag_list) do
-  if znum <= 30 then
-  local zwg_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-  local zwga_name = bot.getUser(v[3]).first_name or Redis:get(black..v[3].."first_name:") or "لا يوجد اسم"
-tt =  "["..zwg_name.."]("..zwg_name..")"
-kk = "["..zwga_name.."]("..zwga_name..")"
-local mony = v[1]
-local convert_mony = string.format("%.0f",mony)
-local emo = zwag_emoji[k]
-znum = znum + 1
-gflos = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-top_zwag = top_zwag..emo.." "..gflos.." 💵 l "..tt.." 👫 "..kk.."\n"
-gg = "\n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-  end
-  end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'رجوع ↪️', data = IdUser..'/toptop'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-}
-return edit(ChatId,Msg_id,top_zwag..gg, 'md', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/topzrf') then
-local UserId = Text:match('(%d+)/topzrf')
-if tonumber(IdUser) == tonumber(UserId) then
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = "["..ban.first_name.."]("..ban.first_name..")"
-else
-news = " لا يوجد"
-end
-zrfee = Redis:get(black.."rrfff"..IdUser) or 0
-local ty_users = Redis:smembers(black.."rrfffid")
-if #ty_users == 0 then
-return bot.sendText(chat_id,msg_id,"𖥔 لا يوجد احد","md",true)
-end
-ty_anubis = "𖥔 توب 20 شخص زرفوا فلوس ↑↓\n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-ty_list = {}
-for k,v in pairs(ty_users) do
-local mony = Redis:get(black.."rrfff"..v)
-table.insert(ty_list, {tonumber(mony) , v})
-end
-table.sort(ty_list, function(a, b) return a[1] > b[1] end)
-num_ty = 1
-emojii ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)"
-}
-for k,v in pairs(ty_list) do
-if num_ty <= 20 then
-local user_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-tt =  "["..user_name.."]("..user_name..")"
-local mony = v[1]
-local convert_mony = string.format("%.0f",mony)
-local emoo = emojii[k]
-num_ty = num_ty + 1
-gflos = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-ty_anubis = ty_anubis..emoo.." "..gflos.." 💵 l "..tt.." \n"
-gflous = string.format("%.0f", zrfee):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-gg = "\n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n𖥔 you -> "..gflous.." 💵 l "..news.." \n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-end
-end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'رجوع ↪️', data = IdUser..'/toptop'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-}
-return edit(ChatId,Msg_id,ty_anubis..gg, 'md', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/topmon') then
-local UserId = Text:match('(%d+)/topmon')
-if tonumber(IdUser) == tonumber(UserId) then
-local F_Name = bot.getUser(IdUser).first_name
-Redis:set(black..IdUser.."first_name:", F_Name)
-local ban = bot.getUser(IdUser)
-if ban.first_name then
-news = "["..ban.first_name.."]("..ban.first_name..")"
-else
-news = " لا يوجد"
-end
-ballancee = Redis:get(IdUser.."boob"..IdUser) or 0
-local bank_users = Redis:smembers(black.."booob")
-if #bank_users == 0 then
-return bot.sendText(chat_id,msg_id,"𖥔 لا يوجد حسابات في البنك","md",true)
-end
-top_mony = "𖥔 توب اغنى 20 شخص ↑↓\n━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\n"
-mony_list = {}
-for k,v in pairs(bank_users) do
-local mony = Redis:get(black.."boob"..v)
-table.insert(mony_list, {tonumber(mony) , v})
-end
-table.sort(mony_list, function(a, b) return a[1] > b[1] end)
-num = 1
-emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4)",
-"5)",
-"6)",
-"7)",
-"8)",
-"9)",
-"10)",
-"11)",
-"12)",
-"13)",
-"14)",
-"15)",
-"16)",
-"17)",
-"18)",
-"19)",
-"20)"
-}
-for k,v in pairs(mony_list) do
-if num <= 20 then
-local user_name = bot.getUser(v[2]).first_name or "لا يوجد اسم"
-tt =  "["..user_name.."]("..user_name..")"
-local mony = v[1]
-local convert_mony = string.format("%.0f",mony)
-local emo = emoji[k]
-num = num + 1
-gflos = string.format("%.0f", mony):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-top_mony = top_mony..emo.." "..gflos.." 💵 l "..tt.." \n"
-gflous = string.format("%.0f", ballancee):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-gg = " ━━━───⊶⛧•𝗧𝗶𝗴𝗲𝗥•⛧⊷───━━━\nyou ) "..gflous.." 💵 l "..news.." \n\nملاحظة -> اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه"
-end
-end
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'رجوع ↪️', data = IdUser..'/toptop'}, 
-},
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-}
-return edit(ChatId,Msg_id,top_mony..gg, 'md', true, false, reply_markup)
-end
-end
-if Text and Text:match('(%d+)/happywheel') then
-local UserId = Text:match('(%d+)/happywheel')
-if tonumber(IdUser) == tonumber(UserId) then
-local media = "https://t.me/f_0_C/24"
-local msg_media = {
-type = "video",
-media = media,
-caption = '',
-parse_mode = "Markdown"
-} 
-local keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '• توقف •', callback_data=IdUser.."/play_wheel"}
-},
-}
-local msg_reply = msg_id/2097152/0.5
-Redis:set(black.."happywheel:st:"..UserId..":"..chat_id, true)
-https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..chat_id.."&message_id="..msg_reply.."&media="..JSON.encode(msg_media).."&reply_markup="..JSON.encode(keyboard))
-end 
-end
 
-if Text and Text:match('(%d+)/play_wheel') then
-local UserId = Text:match('(%d+)/play_wheel')
-if tonumber(IdUser) == tonumber(UserId) and Redis:get(black.."happywheel:st:"..UserId..":"..chat_id) then
-Redis:del(black.."happywheel:st:"..UserId..":"..chat_id)
-local media = {
-{
-"https://t.me/f_0_C/14","مبروك ربحت 10000000 جنيه 💵","10000000"
-},
-{
-"https://t.me/f_0_C/14","مبروك ربحت 5000000 جنيه 💵","5000000"
-},
-{
-"https://t.me/f_0_C/14","مبروك ربحت 1000000 جنيه 💵","1000000"
-},
-{
-"https://t.me/f_0_C/14","مبروك ربحت 100000 جنيه 💵","100000"
-},
-{
-"https://t.me/f_0_C/16","مبروك ربحت 4 قصور","4"
-},
-{
-"https://t.me/f_0_C/15","مبروك ربحت 8 فيلات","8"
-},
-{
-"https://t.me/f_0_C/17","مبروك ربحت 15 منزل","15"
-},
-{
-"https://t.me/f_0_C/20","مبروك ربحت 5 ماسات","5"
-},
-{
-"https://t.me/f_0_C/21","مبروك ربحت 6 قلادات","6"
-},
-{
-"https://t.me/f_0_C/22","مبروك ربحت 10 اساور","10"
-},
-{
-"https://t.me/f_0_C/23","مبروك ربحت 20 خاتم","20"
-},
-{
-"https://t.me/f_0_C/14","مبروك ربحت مضاعفة نصف الفلوس","1"
-},
-{
-"https://t.me/f_0_C/14","مبروك خسرت ربع فلوسك","1"
-},
-}
-local rand = math.random(1,11)
-local msg_media = {
-type = "photo",
-media = media[rand][1],
-caption = media[rand][2],
-parse_mode = "Markdown"
-} 
-local keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '• 𝗧𝗶𝗴𝗲𝗥 𝘀𝗼𝗨𝗥𝗰𝗲 •',url="t.me/TGe_R"}, 
-},
-}
-local msg_reply = msg_id/2097152/0.5
-ballance = Redis:get(black.."boob"..IdUser) or 0
-if rand == 1 then
-ballancek = ballance + media[rand][3]
-Redis:set(black.."boob"..IdUser , math.floor(ballancek))
-elseif rand == 2 then
-ballancek = ballance + media[rand][3]
-Redis:set(black.."boob"..IdUser , math.floor(ballancek))
-elseif rand == 3 then
-ballancek = ballance + media[rand][3]
-Redis:set(black.."boob"..IdUser , math.floor(ballancek))
-elseif rand == 4 then
-ballancek = ballance + media[rand][3]
-Redis:set(black.."boob"..IdUser , math.floor(ballancek))
-elseif rand == 5 then
-local akrksrnumm = Redis:get(black.."akrksrnum"..IdUser) or 0
-local akrksrnoww = tonumber(akrksrnumm) + media[rand][3]
-Redis:set(black.."akrksrnum"..IdUser , math.floor(akrksrnoww))
-ksrnamed = "قصر"
-Redis:set(black.."akrksrname"..IdUser,ksrnamed)
-elseif rand == 6 then
-local akrfelnumm = Redis:get(black.."akrfelnum"..IdUser) or 0
-local akrfelnoww = tonumber(akrfelnumm) + media[rand][3]
-Redis:set(black.."akrfelnum"..IdUser , math.floor(akrfelnoww))
-felnamed = "فيلا"
-Redis:set(black.."akrfelname"..IdUser,felnamed)
-elseif rand == 7 then
-local akrmnznumm = Redis:get(black.."akrmnznum"..IdUser) or 0
-local akrmnznoww = tonumber(akrmnznumm) + media[rand][3]
-Redis:set(black.."akrmnznum"..IdUser , math.floor(akrmnznoww))
-mnznamed = "منزل"
-Redis:set(black.."akrmnzname"..IdUser,mnznamed)
-elseif rand == 8 then
-local mgrmasnumm = Redis:get(black.."mgrmasnum"..IdUser) or 0
-local mgrmasnoww = tonumber(mgrmasnumm) + media[rand][3]
-Redis:set(black.."mgrmasnum"..IdUser , math.floor(mgrmasnoww))
-masnamed = "ماسه"
-Redis:set(black.."mgrmasname"..IdUser,masnamed)
-elseif rand == 9 then
-local mgrkldnumm = Redis:get(black.."mgrkldnum"..IdUser) or 0
-local mgrkldnoww = tonumber(mgrkldnumm) + media[rand][3]
-Redis:set(black.."mgrkldnum"..IdUser , math.floor(mgrkldnoww))
-kldnamed = "قلاده"
-Redis:set(black.."mgrkldname"..IdUser,kldnamed)
-elseif rand == 10 then
-local mgrswrnumm = Redis:get(black.."mgrswrnum"..IdUser) or 0
-local mgrswrnoww = tonumber(mgrswrnumm) + media[rand][3]
-Redis:set(black.."mgrswrnum"..IdUser , math.floor(mgrswrnoww))
-swrnamed = "سوار"
-Redis:set(black.."mgrswrname"..IdUser,swrnamed)
-elseif rand == 11 then
-local mgrktmnumm = Redis:get(black.."mgrktmnum"..IdUser) or 0
-local mgrktmnoww = tonumber(mgrktmnumm) + media[rand][3]
-Redis:set(black.."mgrktmnum"..IdUser , math.floor(mgrktmnoww))
-ktmnamed = "خاتم"
-Redis:set(black.."mgrktmname"..IdUser,ktmnamed)
-elseif rand == 12 then
-ballancek = ballance / 2
-ballancekk = math.floor(ballancek) + ballance
-Redis:set(black.."boob"..IdUser , ballancekk)
-else
-ballancek = ballance / 4
-ballancekk = ballance - math.floor(ballancek)
-Redis:set(black.."boob"..IdUser , math.floor(ballancekk))
-end
-https.request("http://api.telegram.org/bot"..Token.."/editmessagemedia?chat_id="..chat_id.."&message_id="..msg_reply.."&media="..JSON.encode(msg_media).."&reply_markup="..JSON.encode(keyboard))
-end 
-end
-if Text and Text:match('(.*)/zwag_yes/(.*)/mahr/(.*)') then
-local JABWA = {Text:match('(.*)/zwag_yes/(.*)/mahr/(.*)')}
-if tonumber(JABWA[1]) ~= tonumber(UserId) then
-return bot.answerCallbackQuery(data.id, "شو رأيك نزوجك بدالهم ؟", true)
-end
-if tonumber(UserId) == tonumber(JABWA[1]) then
-if Redis:get(black.."zwag_request:"..JABWA[1]) then
-local zwga_id = JABWA[1]
-local zwg_id = JABWA[2]
-local coniss = JABWA[3]
-local zwg = bot.getUser(zwg_id)
-local zwga = bot.getUser(zwga_id)
-local zwg_tag = '['..zwg.first_name.."](tg://user?id="..zwg_id..")"
-local zwga_tag = '['..zwga.first_name.."](tg://user?id="..zwga_id..")"
-local hadddd = tonumber(coniss)
-ballanceekk = tonumber(coniss) / 100 * 15
-ballanceekkk = tonumber(coniss) - ballanceekk
-local convert_mony = string.format("%.0f",ballanceekkk)
-ballancee = Redis:get(black.."boob"..zwg_id) or 0
-ballanceea = Redis:get(black.."boob"..zwga_id) or 0
-zogtea = ballanceea + ballanceekkk
-zeugh = ballancee - tonumber(coniss)
-Redis:set(black.."boob"..zwg_id , math.floor(zeugh))
-Redis:sadd(black.."roogg1",zwg_id)
-Redis:sadd(black.."roogga1",zwga_id)
-Redis:set(black.."roog1"..zwg_id,zwg_id)
-Redis:set(black.."rooga1"..zwg_id,zwga_id)
-Redis:set(black.."roogte1"..zwga_id,zwga_id)
-Redis:set(black.."rahr1"..zwg_id,tonumber(coniss))
-Redis:set(black.."rahr1"..zwga_id,tonumber(coniss))
-Redis:set(black.."roog1"..zwga_id,zwg_id)
-Redis:set(black.."rahrr1"..zwg_id,math.floor(ballanceekkk))
-Redis:set(black.."rooga1"..zwga_id,zwga_id)
-Redis:set(black.."rahrr1"..zwga_id,math.floor(ballanceekkk))
-return bot.editMessageText(chat_id,msg_id,"هييييييي 💃 \nاليوم عندنا فرح 💍🎊\n\nالزوج "..zwg_tag.." 🤵🏻\n   💗\nالزوجة "..zwga_tag.." 👰🏻‍♀️\nالمهر -> "..convert_mony.." جنيه بعد الضريبة 15%\nعشان تشوفون وثيقة زواجكم اكتبوا -> زواجي", 'md', false)
-else
-return bot.editMessageText(chat_id,msg_id,"انتهى الطلب وين كنتي لما طلب ايدك", 'md', false)
-end
-end
-end
-if Text and Text:match('(%d+)/zwag_no/(%d+)') then
-local UserId = {Text:match('(%d+)/zwag_no/(%d+)')}
-if tonumber(UserId[1]) ~= tonumber(UserId) then
-return bot.answerCallbackQuery(data.id, "اي رأيك نزوجك بدالهم ؟", true)
-else
-Redis:del(black.."zwag_request:"..UserId[1])
-Redis:del(black.."zwag_request:"..UserId[2])
-return edit(ChatId, Msg_id, "*خليكي ارمل كدا 👻😹*","md",false)
-end
-end
-if Text and Text:match('(%d+)/company_yes/(%d+)') then
-local Data = {Text:match('(%d+)/company_yes/(%d+)')}
-if tonumber(Data[1]) ~= tonumber(UserId) then
-return bot.answerCallbackQuery(data.id, "الطلب ليس لك", true)
-end
-if tonumber(UserId) == tonumber(Data[1]) then
-if Redis:get(black.."company_request:"..Data[1]) then
-local Cname = Redis:get(black.."companys_name:"..Data[2])
-Redis:sadd(black.."company:mem:"..Cname, UserId)
-Redis:sadd(black.."in_company:", UserId)
-Redis:set(black.."in_company:name:"..UserId, Cname)
-local mem_tag = "["..bot.getUser(UserId).first_name.."](tg://user?id="..UserId..")"
-bot.sendText(Data[2],0, "اللاعب "..mem_tag.." وافق على الانضمام الى شركتك","md",true)
-edit(ChatId,Msg_id,"تم قبول الطلب بنجاح ✅", 'md',false)
-else
-edit(ChatId,Msg_id,"انتهى الطلب للاسف", 'md',false)
-end
-end
-end
-if Text and Text:match('(%d+)/company_no/(%d+)') then
-local UserId = {Text:match('(%d+)/company_no/(%d+)')}
-if tonumber(UserId[1]) ~= tonumber(UserId) then
-return bot.answerCallbackQuery(data.id, "الطلب ليس لك", true)
-else
-Redis:del(black.."company_request:"..UserId[1])
-local mem_tag = "["..bot.getUser(UserId).first_name.."](tg://user?id="..UserId..")"
-bot.sendText(Data[2],0, "اللاعب "..mem_tag.." رفض العمل في شركتك","md",true)
-return bot.editMessageText(chat_id,msg_id,"تم رفض الطلب بنجاح", 'md', false)
-end
-end
 
  
 if text == "معاني" then
@@ -16778,6 +15886,154 @@ Num = math.random(1,20)
 Redis:set(black.."Game:Estimate"..msg.chat_id..msg.sender.user_id,Num)  
 return send(msg_chat_id,msg_id,"\n᯽ اهلا بك عزيزي في لعبة التخمين :\nٴ━━━━━━━━━━\n".."᯽ملاحظه لديك { 3 } محاولات فقط فكر قبل ارسال تخمينك \n\n".."᯽سيتم تخمين عدد ما بين ال {1 و 20} اذا تعتقد انك تستطيع الفوز جرب واللعب الان ؟ ","md",true)  
 end
+end
+if text == "كتبات" or text == "حكمه" or text == "قصيده" then 
+local TWEET_Msg = { 
+"‏من ترك أمرهُ لله، أعطاه الله فوق ما يتمنَّاه💙 ", 
+"‏من علامات جمال المرأة .. بختها المايل ! ",
+"‏ انك الجميع و كل من احتل قلبي🫀🤍",
+"‏ ‏ لقد تْعَمقتُ بكَ كَثيراً والمِيمُ لام .♥️",
+"‏ ‏ممكن اكون اختارت غلط بس والله حبيت بجد🖇️",
+"‏ علينا إحياء زَمن الرّسائل الورقيّة وسط هذه الفوضى الالكترونية العَارمة. ⦁💜",
+"‏ يجي اي الصاروخ الصيني ده جمب الصاروخ المصري لما بيلبس العبايه السوده.🤩♥️",
+"‏ كُنت أرقّ من أن أتحمّل كُل تلك القَسوة من عَينيك .🍍",
+"‏أَكَان عَلَيَّ أَنْ أغْرَس انيابي فِي قَلْبِك لتشعر بِي ؟.",
+"‏ : كُلما أتبع قلبي يدلني إليك .",
+"‏ : أيا ليت من تَهواه العينُ تلقاهُ .",
+"‏ ‏: رغبتي في مُعانقتك عميقة جداً .??",
+"ويُرهقني أنّي مليء بما لا أستطيع قوله.✨",
+"‏ من مراتب التعاسه إطالة الندم ع شيء إنتهى. ⦁ ",
+"‏ ‏كل العالم يهون بس الدنيا بينا تصفي 💙",
+"‏ بعض الاِعتذارات يجب أن تُرفَضّ.",
+"‏ ‏تبدأ حياتك محاولاً فهم كل شيء، وتنهيها محاولاً النجاة من كل ما فهمت.",
+"‏ إن الأمر ينتهي بِنا إلى أعتياد أي شيء.",
+"‏ هل كانت كل الطرق تؤدي إليكِ، أم أنني كنتُ أجعلها كذلك.",
+"‏ ‏هَتفضل توآسيهُم وآحد ورآ التآني لكن أنتَ هتتنسي ومحدِش هَيوآسيك.",
+"‏ جَبَرَ الله قلوبِكُم ، وقَلبِي .🍫",
+"‏ بس لما أنا ببقى فايق، ببقى أبكم له ودان.💖",
+"‏ ‏مقدرش عالنسيان ولو طال الزمن 🖤",
+"‏ أنا لستُ لأحد ولا احد لي ، أنا إنسان غريب أساعد من يحتاجني واختفي.",
+"‏ ‏أحببتك وأنا منطفئ، فما بالك وأنا في كامل توهجي ؟",
+"‏ لا تعودني على دفء شمسك، إذا كان في نيتك الغروب .َ",
+"‏ وانتهت صداقة الخمس سنوات بموقف.",
+"‏ ‏لا تحب أحداً لِدرجة أن تتقبّل أذاه.",
+"‏ إنعدام الرّغبة أمام الشّيء الّذي أدمنته ، انتصار.",
+"‏مش جايز , ده اكيد التأخير وارهاق القلب ده وراه عوضاً عظيماً !💙 ",
+" مش جايز , ده اكيد التأخير وارهاق القلب ده وراه عوضاً عظيماً !💙",
+"فـ بالله صبر  وبالله يسر وبالله عون وبالله كل شيئ ♥️. ",
+"أنا بعتز بنفسي جداً كصاحب وشايف اللي بيخسرني ، بيخسر أنضف وأجدع شخص ممكن يشوفه . ",
+"فجأه جاتلى قافله ‏خلتنى مستعد أخسر أي حد من غير ما أندم عليه . ",
+"‏اللهُم قوني بك حين يقِل صبري... ",
+"‏يارب سهِل لنا كُل حاجة شايلين هَمها 💙‏ ",
+"انا محتاج ايام حلوه بقي عشان مش نافع كدا ! ",
+"المشكله مش اني باخد قررات غلط المشكله اني بفكر كويس فيها قبل ما اخدها .. ",
+"تخيل وانت قاعد مخنوق كدا بتفكر فالمزاكره اللي مزكرتهاش تلاقي قرار الغاء الدراسه .. ",
+" مكانوش يستحقوا المعافرة بأمانه.",
+"‏جمل فترة في حياتي، كانت مع اكثر الناس الذين أذتني نفسيًا. ",
+" ‏إحنا ليه مبنتحبش يعني فينا اي وحش!",
+"أيام مُمله ومستقبل مجهول ونومٌ غير منتظموالأيامُ تمرُ ولا شيَ يتغير ", 
+"عندما تهب ريح المصلحه سوف ياتي الجميع رتكدون تحت قدمك ❤️. ",
+"عادي مهما تعادي اختك قد الدنيا ف عادي ❤. ",
+"بقيت لوحدي بمعنا اي انا اصلا من زمان لوحدي.❤️ ",
+"- ‏تجري حياتنا بما لاتشتهي أحلامنا ! ",
+"تحملين كل هذا الجمال، ‏ألا تتعبين؟",
+"البدايات للكل ، والثبات للصادقين ",
+"مُؤخرًا اقتنعت بالجملة دي جدا : Private life always wins. ",
+" الافراط في التسامح بيخللي الناس تستهين بيك🍍",
+"مهما كنت كويس فـَ إنت معرض لـِ الاستبدال.. ",
+"فخوره بنفسي جدًا رغم اني معملتش حاجه فـ حياتي تستحق الذكر والله . ",
+"‏إسمها ليلة القدر لأنها تُغير الأقدار ,اللهُمَّ غير قدري لحالٍ تُحبه وعوضني خير .. ",
+"فى احتمال كبير انها ليلة القدر ادعوا لنفسكم كتير وأدعو ربنا يشفى كل مريض. 💙 ",
+"أنِر ظُلمتي، وامحُ خطيئتي، واقبل توبتي وأعتِق رقبتي يا اللّٰه. إنكَ عفوٌّ تُحِبُّ العفوَ؛ فاعفُ عني 💛 ", 
+} 
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
+return false 
+end
+if text == "انصحني" or text == "انصحنى" or text == "انصح" then 
+local TWEET_Msg = { 
+"عامل الناس بأخلاقك ولا بأخلاقهم", 
+"الجمال يلفت الأنظار لكن الطيبه تلفت القلوب ", 
+"الاعتذار عن الأخطاء لا يجرح كرامتك بل يجعلك كبير في نظر الناس ",
+"لا ترجي السماحه من بخيل.. فما في البار لظمان ماء",
+"لا تحقرون صغيره إن الجبال من الحصي",
+"لا تستحي من إعطاء فإن الحرمان أقل منه ", 
+"لا تظلم حتى لا تتظلم ",
+"لا تقف قصاد الريح ولا تمشي معها ",
+"لا تكسب موده التحكم الا بالتعقل",
+"لا تمد عينك في يد غيرك ",
+"لا تملح الا لمن يستحقاها ويحافظ عليها",
+"لا حياه للإنسان بلا نبات",
+"لا حياه في الرزق.. ولا شفاعه في الموت",
+"كما تدين تدان",
+"لا دين لمن لا عهد له ",
+"لا سلطان على الدوق فيما يحب أو بكره",
+"لا مروه لمن لادين له ",
+"لا يدخل الجنه من لايأمن من جازه بوائقه",
+"يسروا ولا تعسروا... ويشورا ولا تنفروا",
+"يدهم الصدر ما يبني العقل الواسع ",
+"أثقل ما يوضع في الميزان يوم القيامة حسن الخلق ",
+"أجهل الناس من ترك يقين ما عنده لظن ما عند الناس ",
+"أحياناً.. ويصبح الوهم حقيقه ",
+"مينفعش تعاتب حد مبيعملش حساب لزعلك عشان متزعلش مرتين . ",
+"السفر ومشاهده اماكن مختلفه وجديده ",
+"عدم تضيع الفرص واسثمارها لحظه مجبئها ",
+" اعطاء الاخرين اكثر من ما يتوقعون",
+"معامله الناس بلطف ولكن عدم السماح لاحد بستغالال ذالك ",
+"تكوين صدقات جديده مع الحفظ بلاصدقاء القودامي ",
+"تعلم اصول المهنه بدلا من تضيع الوقت ف تعلم حيل المهنه ",
+"مدح ع الاقل ثلاث اشخاص يوميا ",
+"النظر ف عيون الشخاص عند مخاطبتهم ",
+"التحلي بلسماح مع الاخرين او النفس ",
+"الاكثار من قول كلمه شكرا ",
+" مصافحه الاخرين بثبات وقوة ",
+"الابتعاد عن المناطق السيئه السمعه لتجنب الاحداث السئه ",
+" ادخار 10٪ع الاقل من الدخل",
+" تجنب المخاوف من خلال التعلم من تجارب مختلفه",
+" الحفاظ ع السمعه لانها اغلي ما يملك الانسان",
+" تحويل الاعداء الي اصدقاء من خلال القيام بعمل جيد",
+"لا تصدق كل ما تسمعع. ولا تنفق كل ما تمتلك . ولا تنم قدر ما ترغب ",
+" اعتني بسمعتك جيدا فستثبت للك الايام انها اغلي ما تملك",
+"حين تقول والدتك ستندم ع فعل ذالك ستندم عليه غالبا.. ",
+" لا تخش العقبات الكبيره فخلفها تقع الفرص العظيمه",
+"قد لا يتطلب الامر اكثر من شخص واحد لقلب حياتك رأس ع عقب ",
+"اختر رفيقه حياتك بحرص فهو قرار سيشكل 90٪من سعادتك او بؤسك ",
+" اقلب اداءك الاصدقاء بفعل شي جميل ومفجائ لهم",
+"حين تدق الفرصه ع باباك ادعوها للبيت ",
+"تعلم القواعد جيدا ثن اكسر بعدها ",
+"احكم ع نجاحك من خلال قدرتك ع العطاء وليس الاخذ ",
+" لا تتجاهل الشيطان مهما بدل ثيابه",
+"ركز ع جعل الاشياء افضل وليس اكبر او اعظم ",
+"كن سعيد  بما تمتلك واعمل لامتلاك ما تريد ",
+"اعط الناس اكثر من ما يتوقعون ",
+" لا تكن منشغل لدرجه عدم التعرف ع اصدقاء جدد",
+"استحمه يوم العيد يمعفن🤓",
+"مش تحب اي حد يقرب منك ",
+" خليك مع البت راجل خليك تقيل🥥",
+" انصح نفسك بنفسك بمت😆",
+" كنت نصحت نفسي ياخويا😹", 
+} 
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
+return false 
+end
+if text == "نكته" or text == "قولي نكته" or text == "عايز اضحك" then 
+local TWEET_Msg = { 
+" مرة واحد مصري دخل سوبر ماركت في الكويت عشان يشتري ولاعة..    راح عشان يحاسب بيقوله الولاعة ديه بكام؟   قاله دينار..  قاله منا عارف ان هي نار بس بكام 🤓😂", 
+"بنت حبت تشتغل مع رئيس عصابة..   شغلها في غسيل الأموال 🤓😂 ", 
+"واحد بيشتكي لصاحبه بيقوله أنا مافيش حد بيحبني ولا يفتكرني أبدًا، ومش عارف أعمل إيه.. قاله سهلة.. استلف من الناس فلوس هيسألوا عليك كل يوم! 🤓😂",
+"ﻣﺮه واﺣﺪ ﻣﺴﻄﻮل ﻣﺎﺷﻰ ﻓﻰ اﻟﺸﺎرع ﻟﻘﻰ مذﻳﻌﻪ ﺑﺘﻘﻮﻟﻪ ﻟﻮ ﺳﻤﺤﺖ ﻓﻴﻦ اﻟﻘﻤﺮ؟    ﻗﺎﻟﻬﺎ اﻫﻮه..   ﻗﺎﻟﺘﻠﻮ ﻣﺒﺮوك ﻛﺴﺒﺖ ﻋﺸﺮﻳﻦ ﺟﻨﻴﻪ..   ﻗﺎﻟﻬﺎ ﻓﻰ واﺣﺪ ﺗﺎﻧﻰ ﻫﻨﺎك اﻫﻮه. 🤓😂",
+"واحده ست سايقه على الجي بي اس..  قالها انحرفي قليلًا..   قلعت الطرحة. 🤓😂 ",
+"مرة واحد غبي معاه عربية قديمة جدًا وبيحاول يبيعها وماحدش راضي يشتريها.. راح لصاحبه حكاله المشكلة.. صاحبه قاله عندي لك فكرة جهنمية هاتخليها تتباع الصبح.. أنت تجيب علامة مرسيدس وتحطها عليها. بعد أسبوعين صاحبه شافه صدفة قاله بعت العربية ولا لاء؟ قاله انت  مجنون؟ حد يبيع مرسيدس؟ 🤓😂",
+"مره واحد بلديتنا كان بيدق مسمار فى الحائط فالمسمار وقع منه فقال له :تعالى ف مجاش, فقال له: تعالي ف مجاش. فراح بلديتنا رامي على المسمار شوية مسمامير وقال: هاتوه. 🤓😂",
+"واحدة عملت حساب وهمي ودخلت تكلم جوزها منه.. ومبسوطة أوي وبتضحك.. سألوها بتضحكي على إيه؟ قالت لهم أول مرة يقول لي كلام حلو من ساعة ما اتجوزنا. 🤓😂",
+"بنت حبت تشتغل مع رئيس عصابة..   شغلها في غسيل الأموال 🤓😂",
+"مره واحد اشترى فراخ..   علشان يربيها فى قفص صدره.🤓😂",
+"مرة واحد من الفيوم مات..   أهله صوصوا عليه.🤓😂",
+"ﻣﺮه واﺣﺪ ﻣﺴﻄﻮل ﻣﺎﺷﻰ ﻓﻰ اﻟﺸﺎرع ﻟﻘﻰ مذﻳﻌﻪ ﺑﺘﻘﻮﻟﻪ ﻟﻮ ﺳﻤﺤﺖ ﻓﻴﻦ اﻟﻘﻤﺮ؟    ﻗﺎﻟﻬﺎ اﻫﻮه..   ﻗﺎﻟﺘﻠﻮ ﻣﺒﺮوك ﻛﺴﺒﺖ ﻋﺸﺮﻳﻦ ﺟﻨﻴﻪ..   ﻗﺎﻟﻬﺎ ﻓﻰ واﺣﺪ ﺗﺎﻧﻰ ﻫﻨﺎك اﻫﻮه.🤓😂",
+"مره واحد شاط كرة فى المقص..   اتخرمت. 🤓😂",
+"مرة واحد رايح لواحد صاحبه.. فا البواب وقفه بيقول له انت طالع لمين.. قاله طالع أسمر شوية لبابايا.. قاله يا أستاذ طالع لمين في العماره 🤓😂",
+} 
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
+return false 
 end
 if text == "المختلف" then
 if Redis:get(black.."Status:Games"..msg.chat_id) then
